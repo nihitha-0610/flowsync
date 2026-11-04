@@ -1,0 +1,17 @@
+# ==============================================================================
+# FlowSync Grafana Automated Dashboard Provider Provisioning
+# ==============================================================================
+
+apiVersion: 1
+
+providers:
+  - name: "FlowSync Dashboards"
+    orgId: 1
+    folder: "FlowSync"
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards
+      foldersFromFilesStructure: true

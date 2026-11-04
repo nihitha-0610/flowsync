@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowSync — Streaming Analytics & AI Anomaly Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              heading: ['Manrope', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'],
+              mono: ['"IBM Plex Mono"', 'monospace'],
+            },
+            colors: {
+              brand: {
+                primary: '#64283D',
+                'primary-hover': '#4A1D2E',
+                'primary-light': '#EADDE2',
+                background: '#F8F5F0',
+                surface: '#FFFEFC',
+                beige: '#E9DFD2',
+                text: '#29272B',
+                'text-secondary': '#77716D',
+                border: '#DCD3C8',
+                champagne: '#B08A59',
+                sage: '#47745B',
+                warning: '#A87531',
+                error: '#A74449',
+                info: '#52758B',
+                'dark-bg': '#29272B',
+                'dark-surface': '#39343A',
+                'dark-border': '#514850',
+              }
+            }
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-[#F8F5F0] text-[#29272B] font-sans antialiased min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

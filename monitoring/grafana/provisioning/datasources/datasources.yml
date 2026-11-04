@@ -1,0 +1,32 @@
+# ==============================================================================
+# FlowSync Grafana Automated Datasource Provisioning
+# ==============================================================================
+
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    editable: true
+    jsonData:
+      timeInterval: 5s
+      httpMethod: POST
+
+  - name: PostgreSQL-FlowSync
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    user: flowsync_user
+    secureJsonData:
+      password: flowsync_secure_password
+    jsonData:
+      database: flowsync_db
+      sslmode: disable
+      maxOpenConns: 10
+      maxIdleConns: 5
+      connMaxLifetime: 14400
+      postgresVersion: 1600
+    editable: true

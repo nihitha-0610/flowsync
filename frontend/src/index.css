@@ -1,0 +1,40 @@
+/* FlowSync Official Brand System */
+:root {
+  --color-primary: #64283D;         /* Deep burgundy */
+  --color-primary-hover: #4A1D2E;
+  --color-primary-light: #EADDE2;
+
+  --color-background: #F8F5F0;      /* Warm ivory */
+  --color-surface: #FFFEFC;         /* Warm white */
+  --color-beige: #E9DFD2;
+
+  --color-text: #29272B;            /* Graphite */
+  --color-text-secondary: #77716D;  /* Muted graphite */
+
+  --color-border: #DCD3C8;          /* Warm neutral */
+  --color-champagne: #B08A59;       /* Champagne accents */
+  --color-sage: #47745B;            /* Healthy/success */
+  --color-warning: #A87531;         /* Amber warning */
+  --color-error: #A74449;           /* Rose critical */
+  --color-info: #52758B;            /* Muted blue */
+
+  --color-dark-background: #29272B; /* Dark graphite for analytics */
+  --color-dark-surface: #39343A;    /* Dark surface */
+  --color-dark-border: #514850;     /* Dark neutral */
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', 'Inter', sans-serif;
+}
+
+code, kbd, samp, pre, .font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}

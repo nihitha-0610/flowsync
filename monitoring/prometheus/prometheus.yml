@@ -1,0 +1,43 @@
+# ==============================================================================
+# FlowSync Prometheus Configuration
+# ==============================================================================
+
+global:
+  scrape_interval: 10s
+  evaluation_interval: 10s
+  scrape_timeout: 5s
+
+scrape_configs:
+  # Self-monitoring for Prometheus server
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # FastAPI Backend Service (Metrics endpoint active in Phase 7)
+  - job_name: "flowsync-backend"
+    metrics_path: "/metrics"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["backend:8000"]
+    relabel_configs:
+      - target_label: application
+        replacement: flowsync-api
+
+  # Kafka JMX / Exporter (Infrastructure metrics)
+  - job_name: "kafka"
+    static_configs:
+      - targets: ["kafka-exporter:9308"]
+
+  # PostgreSQL Exporter (Database pool and transaction metrics)
+  - job_name: "postgresql"
+    static_configs:
+      - targets: ["postgres-exporter:9187"]
+
+  # Spark Structured Streaming Engine (Phase 4 Real-time Metrics)
+  - job_name: "spark-streaming"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["spark-streaming:8000"]
+    relabel_configs:
+      - target_label: application
+        replacement: flowsync-streaming
