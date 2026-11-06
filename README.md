@@ -13,7 +13,7 @@
 - **Course:** Fundamentals of Data Engineering
 - **Course Code:** `24DEA3101`
 - **Academic Year:** 2026–27
-- **Institution:** Department of Computer Science & Engineering, KL University
+- **Institution:** Department of Computer Science & Engineering and Information Technology, KLH University
 
 ### Team Members
 
@@ -464,7 +464,7 @@ FlowSync/
 - **Multi-Cloud Deployment:** Kubernetes Helm charts and Terraform templates for AWS EMR and Google Cloud Dataproc.
 
 ### Copyright
-Copyright © 2026–2027 KL University, CSE Department. All Rights Reserved.  
+Copyright © 2026–2027 KLH University, CSE & CSIT Department. All Rights Reserved.  
 **S. Harini, Y. Nihitha, A. Sri Anitha.**
 
 No permission is granted to use, copy, modify, distribute, or commercially exploit this software without prior written authorization from the copyright holder, except where permitted by applicable law.
